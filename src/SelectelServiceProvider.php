@@ -60,7 +60,7 @@ class SelectelServiceProvider extends ServiceProvider
     protected function getSelectelContainer(OpenStack $client, array $config)
     {
 
-        $store = $client->objectStoreService('swift', 'common');
+        $store = $client->objectStoreService('swift', 'ru-1');
         $container = $store->getContainer($config['container']);
 
         return $container;
